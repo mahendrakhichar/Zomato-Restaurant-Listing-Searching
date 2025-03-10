@@ -4,8 +4,21 @@ const app = express();
 const restaurantRoutes = require('./routes/restaurantRoutes');
 
 // Enable CORS for all routes
-app.use(cors());
+const allowedOrigins = [
+  'http://localhost:3000', // Allow local development
+  'https://mahendra-foods.netlify.app' // Allow deployed frontend
+];
 
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true // Allow cookies if needed
+}));
 // Middleware to parse incoming requests with JSON payloads
 app.use(express.json());
 
