@@ -1,5 +1,6 @@
 // const API_BASE_URL = 'http://localhost:5000/api';
-const API_BASE_URL = "https://zomato-restaurant-listing-searching-2.onrender.com/api" ;
+
+const API_BASE_URL = "https://zomato-restaurant-listing-searching-2.onrender.com/api";
 
 // Fetch restaurant list with pagination and optional filters
 export const getRestaurantList = async (page, limit, city = '', lat = '', lon = '', radius = 10, name = '') => {
@@ -46,7 +47,7 @@ export const getRestaurantList = async (page, limit, city = '', lat = '', lon = 
 // Fetch restaurant details by ID
 export const getRestaurantDetails = async (id) => {
     try {
-        const response = await fetch(`${API_BASE_URL}/restaurants/${id}`, {
+        const response = await fetch( `${API_BASE_URL}/restaurants/${id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
