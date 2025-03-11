@@ -7,19 +7,19 @@ const restaurantRoutes = require('./routes/restaurantRoutes');
 const allowedOrigins =  [
   'http://localhost:3000',  // Allow local development
   'https://mahendar-foods.netlify.app',  // Allow deployed frontend
-  'https://zomato-restaurant-listing-searching-three.vercel.app/'
+  'https://zomato-restaurant-listing-searching-three.vercel.app'
 ] ;
 
-    app.use(cors({
-    origin: (origin, callback) => {
-        if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-        } else {
-        callback(new Error('Not allowed by CORS'));
-        }
-    },
-    credentials: true // Allow cookies if needed
-    }));
+app.use(cors({
+origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+    callback(null, true);
+    } else {
+    callback(new Error('Not allowed by CORS'));
+    }
+},
+credentials: true // Allow cookies if needed
+}));
 // Middleware to parse incoming requests with JSON payloads
 app.use(express.json());
 
