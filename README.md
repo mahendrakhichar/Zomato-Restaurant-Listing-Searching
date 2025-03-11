@@ -6,7 +6,8 @@ A full-stack web application for discovering and searching restaurants by name, 
 
 ## 🌟 Live Demo
 
-Visit the live site: Coming Soon;
+Visit the live site: [Coming Soon;](https://zomato-restaurant-listing-searching-three.vercel.app/) ;
+backend server is live on Render : https://zomato-restaurant-listing-searching-2.onrender.com/api/restaurants
 
 ## 🚀 Features
 
