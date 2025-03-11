@@ -6,7 +6,8 @@ const restaurantRoutes = require('./routes/restaurantRoutes');
 // Enable CORS for all routes
 const allowedOrigins =  [
   'http://localhost:3000',  // Allow local development
-  'https://mahendar-foods.netlify.app'  // Allow deployed frontend
+  'https://mahendar-foods.netlify.app',  // Allow deployed frontend
+  'https://zomato-restaurant-listing-searching-three.vercel.app/'
 ] ;
 
     app.use(cors({
